@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-label {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.real-radio {
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+.radio::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+  
+    border: 0;
+    background-color: rgb(0, 255, 123);
+    border-radius: 50%;
+}
+
+.radio:hover:before {
+    transition: all .4s ease;
+    background-color: rgb(225, 255, 239);
+}
+  
+.radio:checked:before {
+    border: 0.2rem solid rgb(225, 255, 239);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: none;
+    border-radius: 50%;
+    transition: all .4s ease;
+}

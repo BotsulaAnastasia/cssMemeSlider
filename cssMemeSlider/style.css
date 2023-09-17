@@ -9,16 +9,13 @@ body {
 }
 
 .wrapper {
-    max-width: 1024px;
-    margin: auto;
-}
-
-.slider {
+    max-width: 64rem;
+    margin: 0.8rem auto 0;
     overflow: hidden;
 }
 
 .slides {
-    width: 62.5rem;
+    width: 62rem;
     height: 35rem;
     display: flex;
     overflow: hidden;
@@ -26,67 +23,78 @@ body {
     border-radius: 0.5rem;
 }
 
-.navigation {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.nav-label {
-    width: 1.6rem;
-    height: 1.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.real-radio {
-    appearance: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.4rem;
-    height: 1.4rem;
-    margin: 0;
-    cursor: pointer;
-  }
-  
-.radio::before {
-    content: "";
-    width: 0.8rem;
-    height: 0.8rem;
-  
-    border: 0;
-    background-color: rgb(0, 255, 123);
-    border-radius: 50%;
-}
-
-.radio:hover:before {
-    transition: all .4s ease;
-    background-color: rgb(225, 255, 239);
-}
-  
-.radio:checked:before {
-    border: 0.2rem solid rgb(225, 255, 239);
-    width: 0.5rem;
-    height: 0.5rem;
-    background: none;
-    border-radius: 50%;
-    transition: all .4s ease;
+.slides img {
+    object-fit: cover;
 }
 
 .text-block {
-    width: 400%;
+    width: 100%;
     max-height: 4rem;
     overflow: hidden;
-    display: flex;
 }
 
-.text-block > div {
+.text {
     font-family: 'Poppins', Verdana, sans-serif;
     color: rgb(225, 255, 239);
     font-size: 2.5rem;
     font-weight: 400;
-    width: 100%;
-    max-height: 4rem;
+}
+
+.radio-input {
+    display: none;
+}
+
+.under-slides {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-label {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.circle {
+    cursor: pointer;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(0, 255, 123);
+    border-radius: 50%;
+    border: 0;
+    transition:  all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.circle:hover {
+    background-color:  rgb(225, 255, 239);
+    border: 0;
+}
+
+#radio1:checked ~ .under-slides .circle1 {
+    background-color: transparent;
+    border: 0.3rem solid rgb(225, 255, 239);
+}
+  
+#radio2:checked ~ .under-slides .circle2 {
+    background-color: transparent;
+    border: 0.3rem solid rgb(225, 255, 239);
+}
+  
+#radio3:checked ~ .under-slides .circle3 {
+    background-color: transparent;
+    border: 0.3rem solid rgb(225, 255, 239);
+}
+  
+#radio4:checked ~ .under-slides .circle4 {
+    background-color: transparent;
+    border: 0.3rem solid rgb(225, 255, 239);
 }

@@ -8,16 +8,24 @@ body {
     margin: auto;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 3rem);
+}
+
 .wrapper {
     max-width: 64rem;
-    margin: 0.8rem auto 0;
     overflow: hidden;
+    margin: 3rem;   
 }
 
 .slides {
-   overflow: hidden;
-   border: 0.6rem solid  rgb(0, 255, 123);
-border-radius: 0.5rem; 
+    overflow: hidden;
+    border: 0.6rem solid  rgb(0, 255, 123);
+    border-radius: 0.5rem;
+    
 }
 
 .slides-wrapper {

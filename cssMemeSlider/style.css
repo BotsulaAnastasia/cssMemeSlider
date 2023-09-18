@@ -71,8 +71,9 @@ body {
 .text {
     font-family: 'Poppins', Verdana, sans-serif;
     color: rgb(225, 255, 239);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
+    line-height: 4rem;
     width: 100%;
 }
 
@@ -112,6 +113,11 @@ body {
 .nav-label {
     cursor: pointer;
     padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .circle {
@@ -129,6 +135,13 @@ body {
 .circle:hover {
     background-color:  rgb(225, 255, 239);
     border: 0;
+}
+
+.circle:active {
+    background-color:  rgb(225, 255, 239);
+    border: 0;
+    width: 0.5rem;
+    height: 0.5rem;
 }
 
 #radio1:checked ~ .under-slides .circle1 {
@@ -149,4 +162,19 @@ body {
 #radio4:checked ~ .under-slides .circle4 {
     background-color: transparent;
     border: 0.3rem solid rgb(225, 255, 239);
+}
+
+@media (max-width: 768px) {
+    .under-slides {
+        flex-direction: column-reverse;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

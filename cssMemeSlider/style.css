@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 3rem);
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -57,7 +57,6 @@ body {
 
 .text-block {
     width: 100%;
-    max-height: 4rem;
     overflow: hidden;
 }
 
@@ -118,6 +117,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .circle {
@@ -174,7 +174,26 @@ body {
 @media (max-width: 768px) {
     .text {
         display: flex;
-        align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .text {
+        font-size: 1.5rem;
+    }
+    .nav-label {
+        width: 1rem;
+        height: 1rem;
+    }
+    .circle {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media (max-width: 462px) {
+    .text {
+        font-size: 1rem;
     }
 }
